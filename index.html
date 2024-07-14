@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .img-dice{
+           height: 300px;
+           box-shadow: 0px 5px 20px 0px beige;
+           margin-left: 600px;
+           margin-top: 80px;
+           border: 2px solid beige;
+           padding: 8px;
+        }
+        .btn{
+           background-color: black;
+           color: beige;
+           border:1px solid beige;
+           border-radius: 10px;
+           padding: 5px 25px;
+           font-size: 30px;
+           margin-top:80px;
+           margin-left: 700px;
+           cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+   <div>
+    <img src="dice (7).png" class="img-dice" id="dice_img"/>
+   </br>
+
+    <button class="btn" onclick="roll()">Roll</button>
+   </div>
+   <script>
+    function roll(){
+        const randomNumber = Math.floor(Math.random()*(7-1)+1)
+        const imgElement=document.getElementById("dice_img")
+        
+        switch(randomNumber)
+        {
+            case 1:
+                imgElement.src="1.png"
+                break;
+            case 2:
+                imgElement.src="2.png"
+                break;
+            case 3:
+                imgElement.src="3.png"
+                break;
+            case 4:
+                imgElement.src="4.png"
+                break;
+            case 5:
+                imgElement.src="5.png"
+                break;
+            case 6:
+                imgElement.src="6.png"
+                break;
+
+        }
+    }
+   </script>
+
+</body>
+</html>
